@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>劉品辰的作品集</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- 自訂 CSS -->
+  <style>
+    /* --- 作品集圖片統一尺寸 --- */
+    #portfolio .card-img-top {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    /* --- 關於我照片 --- */
+    #about img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <!-- 1. 導航列 -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">劉品辰</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">首頁</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">關於</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">作品</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">聯絡</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 2. Hero Section -->
+  <section id="home" class="py-5 text-center bg-light">
+    <div class="container">
+      <h1 class="display-4 fw-bold">嗨，我是劉品辰！</h1>
+      <p class="lead">淡江大學 | 資訊管理學系</p>
+      <a href="#portfolio" class="btn btn-primary me-2">查看作品</a>
+      <a href="#contact" class="btn btn-outline-dark">聯絡我</a>
+    </div>
+  </section>
+
+  <!-- 3. 關於我 -->
+<section id="about" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center mb-5">關於我</h2>
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center mb-4 mb-md-0">
+        <img src="C.png" alt="劉品辰照片" class="img-fluid rounded-circle shadow">
+      </div>
+      <div class="col-md-6">
+        <p class="fs-5 text-secondary">我目前就讀淡江大學資訊管理學系三年級，利用課堂所學製作網頁。</p>
+        
+        <!-- 興趣 -->
+        <p class="fw-bold mb-1">興趣：</p>
+        <p class="text-secondary">玩桌遊、看小說</p>
+
+        <!-- 學歷 -->
+        <p class="fw-bold mb-1">學歷：</p>
+        <ul class="text-secondary mb-0">
+          <li>高中：國立北科附工</li>
+          <li>大學：淡江大學 資訊管理學系</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- 4. 技能展示（Card + Badge + Alert + Progress Bar） -->
+<section id="skills" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">我的技能</h2>
+    <div class="row">
+
+      <!-- HTML / CSS -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">HTML / CSS 
+              <span class="badge bg-secondary ms-2">初階</span>
+            </h5>
+            <div class="alert alert-info py-1 mt-2" role="alert">
+              熟悉基礎標記與 RWD 響應式概念
+            </div>
+            <div class="progress">
+              <div class="progress-bar bg-secondary" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">JavaScript 
+              <span class="badge bg-secondary ms-2">初階</span>
+            </h5>
+            <div class="alert alert-warning py-1 mt-2" role="alert">
+              熟悉基本語法與 DOM 操作
+            </div>
+            <div class="progress">
+              <div class="progress-bar bg-secondary" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bootstrap -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Bootstrap 
+              <span class="badge bg-secondary ms-2">初階</span>
+            </h5>
+            <div class="alert alert-info py-1 mt-2" role="alert">
+              能建立基本 RWD 排版與組件
+            </div>
+            <div class="progress">
+              <div class="progress-bar bg-secondary" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Git / GitHub -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Git / GitHub 
+              <span class="badge bg-secondary ms-2">初階</span>
+            </h5>
+            <div class="alert alert-warning py-1 mt-2" role="alert">
+              基本版本控制與 GitHub 操作
+            </div>
+            <div class="progress">
+              <div class="progress-bar bg-secondary" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 創意思維 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">創意思維 
+              <span class="badge bg-primary ms-2">中階</span>
+            </h5>
+            <div class="alert alert-info py-1 mt-2" role="alert">
+              能提出有趣的點子並應用於專案設計
+            </div>
+            <div class="progress">
+              <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- 5. 作品集 -->
+  <section id="portfolio" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center mb-5">作品集</h2>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 shadow-sm">
+            <img src="D.jpeg" class="card-img-top" alt="作品1">
+            <div class="card-body">
+              <h5 class="card-title">前端專案一</h5>
+              <p class="card-text">以 RWD 為核心的作品，展現了 Bootstrap 的靈活應用。</p>
+              <a href="https://github.com/Lucas041215/114_tkuim_web.git" class="btn btn-primary" target="_blank">查看詳情</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 shadow-sm">
+            <img src="E.webp" class="card-img-top" alt="作品2">
+            <div class="card-body">
+              <h5 class="card-title">互動式網頁設計</h5>
+              <p class="card-text">結合動畫與互動設計，提升使用者體驗的創意作品。</p>
+              <a href="https://github.com/Lucas041215/114_tkuim_web.git" class="btn btn-primary" target="_blank">查看詳情</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 shadow-sm">
+            <img src="F.webp" class="card-img-top" alt="作品3">
+            <div class="card-body">
+              <h5 class="card-title">個人作品展示頁</h5>
+              <p class="card-text">運用現代設計風格，展示個人作品與技能的整合平台。</p>
+              <a href="https://github.com/Lucas041215/114_tkuim_web.git" class="btn btn-primary" target="_blank">查看詳情</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. 聯絡表單 -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">聯絡我</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">姓名</label>
+            <input type="text" class="form-control" id="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label">主旨</label>
+            <input type="text" class="form-control" id="subject" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">訊息</label>
+            <textarea class="form-control" id="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 mb-3">送出</button>
+        </form>
+
+        <!-- Gmail 連結 -->
+        <p class="text-center mt-2">
+          或直接寄信給我：
+          <a href="mailto:413637306@o365.tku.edu.tw" class="text-decoration-none fw-bold">413637306@o365.tku.edu.tw</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- 7. Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <div class="mb-3">
+        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-github fs-4"></i></a>
+      </div>
+      <p class="mb-0">© 2025 劉品辰 | 作品集網頁製作</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
