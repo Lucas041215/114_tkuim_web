@@ -1,0 +1,167 @@
+# Week09 — 報名API+前後端串接
+
+本週Lab目標將 Week07 的註冊表單與新的 Node.js API 整合，並建立可重複執行的測試腳本。
+
+---
+
+# 專案架構
+
+```
+week09/
+  client/
+    signup_form.html
+    signup_form.js
+  server/
+    app.js
+    routes/signup.js
+    package.json
+    .env
+  test/
+    api.http
+    signup_collection.json
+  README.md
+```
+# 使用技術
+
+- Node.js + Express（建立 API）
+- JavaScript（前端表單行為）
+- Bootstrap（部分 UI）
+- REST Client（VS Code）
+- Postman（API 測試）
+
+---
+
+# 安裝與啟動步驟
+
+## 後端（server）
+
+```bash
+cd server
+npm install
+npm run dev
+```
+成功後看到：
+
+```
+Server ready on http://localhost:3001
+
+```
+## 前端（client）
+
+使用VS Code Live Server開啟：
+
+```
+client/signup_form.html
+
+```
+或直接雙擊 HTML 開啟瀏覽器也可。
+
+---
+
+# 後端 API 文件
+## GET /health  
+檢查伺服器運作。
+
+**回應：**
+
+```json
+{ "status": "ok" }
+```
+---
+## POST /api/signup  
+建立一筆報名資料。
+
+### Request Body（JSON）
+
+```json
+{
+  "name": "Test User",
+  "email": "test@example.com",
+  "phone": "0912345678",
+  "password": "demoPass88",
+  "confirmPassword": "demoPass88",
+  "interests": ["後端入門"],
+  "terms": true
+}
+```
+### 成功（201 Created）
+
+```json
+{
+  "message": "報名成功",
+  "participant": {
+    "id": "xxxxxxx",
+    "name": "Test User",
+    "email": "test@example.com",
+    "phone": "0912345678",
+    "interests": ["後端入門"],
+    "createdAt": "2025-11-19T..."
+  }
+}
+```
+### 錯誤（400 Bad Request）
+
+```json
+{ "error": "錯誤訊息" }
+
+```
+## GET /api/signup  
+取得目前所有報名資料。
+
+```json
+{
+  "total": 1,
+  "data": [ ... ]
+}
+```
+---
+
+## DELETE /api/signup/:id（選用）  
+刪除某位報名者（如果有實作）。
+
+---
+
+# 前端功能
+
+`client/signup_form.js` 負責：
+
+- 表單送出 (`fetch POST /api/signup`)
+- 顯示成功或失敗訊息
+- Loading 狀態／避免重複送出
+- 查看報名清單（GET /api/signup）
+
+---
+
+# API 測試方式
+
+本專案提供兩種測試方式，符合課程要求：
+
+## 方式一：VS Code REST Client
+
+開啟：
+
+```
+tests/api.http
+```
+依序測試：
+
+- GET /health  
+- POST /api/signup（成功案例）  
+- POST /api/signup（錯誤案例）  
+- GET /api/signup  
+---
+
+## 方式二：Postman（可選）
+
+匯入：
+
+```
+tests/signup_collection.json
+```
+可測試：
+
+- 服務狀態檢查  
+- 報名成功  
+- 報名錯誤  
+- 查詢報名清單  
+---
