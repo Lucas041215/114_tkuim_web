@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>ZERO-G | Terminal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="lab-theme">
+    <div class="background-engine">
+        <div class="blur-sphere sphere-1"></div>
+        <div class="blur-sphere sphere-2"></div>
+    </div>
+
+    <header class="header-ui">
+        <div class="logo-text">ZERO-G / SYSTEM</div>
+        <nav class="navigation">
+            <a href="index.html" class="nav-link active">TERMINAL</a>
+            <a href="gallery.html" class="nav-link">ARCHIVE</a>
+            <span class="system-time" id="clock">00:00:00</span>
+        </nav>
+    </header>
+
+    <main class="main-layout">
+        <aside class="control-panel glass-effect">
+            <div class="panel-section">
+                <h3 class="section-label">Realtime Metrics</h3>
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <span class="metric-value" id="fps-val">144</span>
+                        <span class="metric-tag">FPS</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-value" id="scroll-percent">0</span>
+                        <span class="metric-tag">DEPTH %</span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-section">
+                <h3 class="section-label">Atmosphere</h3>
+                <input type="range" id="density-slider" min="20" max="150" value="80" style="width:100%;">
+                <div class="visual-progress"><div id="density-bar" class="progress-fill" style="width:50%;"></div></div>
+            </div>
+            <div class="panel-section status-box" style="margin-top:auto;">
+                <div class="status-indicator"><span class="pulse-dot"></span><span id="active-count">1</span> Core Online</div>
+            </div>
+        </aside>
+
+        <section class="content-view">
+            <div class="hero-block">
+                <span class="version-tag">SYSTEM VERSION 2.0.4</span>
+                <h1 class="glitch-title">ANTI-GRAVITY<br>ENGINE</h1>
+                <p class="hero-desc">介面已進入失重狀態。所有物件將根據即時渲染引擎進行動態物理偏移。</p>
+                <div class="action-bar">
+                    <button id="add-card" class="btn-main">Generate Module</button>
+                </div>
+            </div>
+            <div class="dynamic-grid" id="card-stage">
+                <div class="module-card glass-effect float-anim">
+                    <div class="card-header">Core Logic</div>
+                    <p class="card-text">負責物理模擬與空間運算。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
